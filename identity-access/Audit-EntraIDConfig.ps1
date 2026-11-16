@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Audits Entra ID (Azure AD) configuration against common AZ-500 / CIS
+    Audits Entra ID (Azure AD) configuration against common CIS
     Azure Benchmark identity controls: MFA coverage, privileged role
     assignments, and stale guest accounts.
 
