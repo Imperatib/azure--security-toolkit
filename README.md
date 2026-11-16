@@ -1,14 +1,14 @@
 # Azure Security Hardening Toolkit
 
-**Author:** Brandon Imperati | AZ-500 Candidate | CySA+ | SSCP
+**Author:** Brandon Imperati | CySA+ | PenTest+ | SSCP
 **Tools:** PowerShell · Microsoft Graph · Az PowerShell Modules
-**Focus:** AZ-500 Exam Alignment · CIS Azure Benchmark v2.0
+**Focus:** Azure Security Auditing · CIS Azure Benchmark v2.0
 
 ---
 
 ## Overview
 
-A PowerShell-based toolkit for auditing Azure environments against the CIS Microsoft Azure Foundations Benchmark v2.0. Built to operationalize the security principles covered in the AZ-500 certification — bridging certification study with executable, read-only audit scripts across identity, storage, networking, and Defender for Cloud.
+A PowerShell-based toolkit for auditing Azure environments against the CIS Microsoft Azure Foundations Benchmark v2.0. Read-only audit scripts across identity, storage, networking, and Defender for Cloud.
 
 All scripts are **read-only** — they audit and report, they do not remediate.
 
@@ -24,7 +24,8 @@ azure--security-toolkit/
 │   └── Audit-StorageAccounts.ps1       # HTTPS enforcement, public access, TLS version
 ├── defender-monitoring/
 │   └── Export-DefenderSecureScore.ps1  # Secure Score + unresolved recommendations export
-├── network-security/                   # NSG / network exposure audit scripts
+├── network-security/
+│   └── Audit-NSGRules.ps1              # NSGs exposing management ports to the internet
 └── README.md
 ```
 
@@ -37,7 +38,7 @@ azure--security-toolkit/
 | 1.x         | Identity & Access     | ✅ Covered | `identity-access/Audit-EntraIDConfig.ps1` |
 | 2.x         | Microsoft Defender     | ✅ Covered | `defender-monitoring/Export-DefenderSecureScore.ps1` |
 | 3.x         | Storage Accounts       | ✅ Covered | `data-storage/Audit-StorageAccounts.ps1` |
-| 6.x         | Networking             | ✅ Covered | `network-security/` |
+| 6.x         | Networking             | ✅ Covered | `network-security/Audit-NSGRules.ps1` |
 | 4.x         | Database Services      | 🔜 Planned |
 
 ---
@@ -72,5 +73,5 @@ Each script writes timestamped CSV findings to the output folder for tracking ov
 
 - [ ] Database services module (CIS 4.x)
 - [ ] One-shot `baseline/` runner that executes all modules and produces a combined report
-- [ ] Setup guide and AZ-500 domain alignment doc
+- [ ] Setup guide
 
