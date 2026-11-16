@@ -16,7 +16,7 @@
     .\Audit-NSGRules.ps1 -SubscriptionId "xxxx-xxxx" -OutputPath ".\reports\"
 .NOTES
     Author:      Brandon Imperati
-    Cert Align:  AZ-500 | CIS Azure Benchmark v2.0 Section 6
+    Alignment:   CIS Azure Benchmark v2.0 Section 6
     MITRE:       T1133 (External Remote Services), T1046 (Network Service Discovery)
 #>
 
